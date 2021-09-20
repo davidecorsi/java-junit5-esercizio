@@ -96,4 +96,30 @@ class RettangoloTests {
 	void compareToTest(Figura figura1, Figura figura2, boolean b, int n) {
 		assertEquals(n, figura1.compareTo(figura2));
 	}
+	
+	@Test
+	void setBaseTest() {
+		Rettangolo rettangolo = new Rettangolo(3, 5);
+		rettangolo.setBase(5);
+		assertEquals(5, rettangolo.getBase());
+	}
+	
+	@Test
+	void setBaseExceptionTest() {
+		Rettangolo rettangolo = new Rettangolo(3, 5);
+		assertThrows(FiguraException.class, () -> rettangolo.setBase(-4));
+	}
+	
+	@Test
+	void setAltezzaTest() {
+		Rettangolo rettangolo = new Rettangolo(3, 5);
+		rettangolo.setAltezza(4);
+		assertEquals(4, rettangolo.getAltezza());
+	}
+	
+	@Test
+	void setAltezzaExceptionTest() {
+		Rettangolo rettangolo = new Rettangolo(3, 5);
+		assertThrows(FiguraException.class, () -> rettangolo.setAltezza(-4));
+	}
 }

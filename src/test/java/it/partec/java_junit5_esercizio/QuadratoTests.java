@@ -96,4 +96,17 @@ class QuadratoTests {
 	void compareToTest(Figura figura1, Figura figura2, boolean b, int n) {
 		assertEquals(n, figura1.compareTo(figura2));
 	}
+	
+	@Test
+	void setLatoTest() {
+		Quadrato quadrato = new Quadrato(5);
+		quadrato.setLato(3);
+		assertEquals(3, quadrato.getBase());
+	}
+	
+	@Test
+	void setLatoExceptionTest() {
+		Quadrato quadrato = new Quadrato(5);
+		assertThrows(FiguraException.class, () -> quadrato.setLato(-3));
+	}
 }

@@ -1,7 +1,5 @@
 package it.partec.java_junit5_esercizio.geometria;
 
-import it.partec.java_junit5_esercizio.exception.FiguraException;
-
 public class Quadrato extends Rettangolo {
 
 	public Quadrato(double lato) {
@@ -13,12 +11,8 @@ public class Quadrato extends Rettangolo {
 	}
 
 	public void setLato(double lato) {
-		if(lato > 0) {
-			super.setBase(lato);
-			super.setAltezza(lato);
-		} else {
-			throw new FiguraException("Il lato deve essere superiori a 0");
-		}
+		super.setBase(lato);
+		super.setAltezza(lato);
 	}
 
 	public String toString() {

@@ -14,8 +14,8 @@ public class Quadrato extends Rettangolo {
 
 	public void setLato(double lato) {
 		if(lato > 0) {
-			setBase(lato);
-			setAltezza(lato);
+			super.setBase(lato);
+			super.setAltezza(lato);
 		} else {
 			throw new FiguraException("Il lato deve essere superiori a 0");
 		}
@@ -26,10 +26,10 @@ public class Quadrato extends Rettangolo {
 	}
 
 	public void setBase(double lato) {
-		super.setBase(lato);
+		setLato(lato);
 	}
 
 	public void setAltezza(double lato) {
-		super.setAltezza(lato);
+		setLato(lato);
 	}
 }
